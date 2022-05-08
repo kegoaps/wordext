@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9539BA552827C2E800C5EF51 /* AlertWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9539BA542827C2E800C5EF51 /* AlertWrapper.swift */; };
 		9555D820281B1AB500267D63 /* ParentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9555D81F281B1AB500267D63 /* ParentView.swift */; };
 		9587AE29281A8A1200E5DD13 /* WordExtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587AE28281A8A1200E5DD13 /* WordExtApp.swift */; };
 		9587AE2B281A8A1200E5DD13 /* ExtractView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9587AE2A281A8A1200E5DD13 /* ExtractView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9539BA542827C2E800C5EF51 /* AlertWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWrapper.swift; sourceTree = "<group>"; };
 		9555D81F281B1AB500267D63 /* ParentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentView.swift; sourceTree = "<group>"; };
 		9587AE25281A8A1200E5DD13 /* WordExt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordExt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9587AE28281A8A1200E5DD13 /* WordExtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordExtApp.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		9587AE27281A8A1200E5DD13 /* WordExt */ = {
 			isa = PBXGroup;
 			children = (
+				9539BA542827C2E800C5EF51 /* AlertWrapper.swift */,
 				9587AE28281A8A1200E5DD13 /* WordExtApp.swift */,
 				9555D81F281B1AB500267D63 /* ParentView.swift */,
 				9587AE2A281A8A1200E5DD13 /* ExtractView.swift */,
@@ -158,6 +161,7 @@
 				9587AE41281B111400E5DD13 /* ViewRouter.swift in Sources */,
 				9555D820281B1AB500267D63 /* ParentView.swift in Sources */,
 				9587AE2B281A8A1200E5DD13 /* ExtractView.swift in Sources */,
+				9539BA552827C2E800C5EF51 /* AlertWrapper.swift in Sources */,
 				9587AE29281A8A1200E5DD13 /* WordExtApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
