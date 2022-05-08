@@ -10,7 +10,7 @@ import SwiftUI
 struct TextView: UIViewRepresentable {
     typealias UIViewType = UITextView
     
-    var placeholderText: String = "\nStart by pasting articles or texts here.\n\nOf course you can also type them if you have more time :p\n\nClick 􀁝 first to know the total words of the texts,\nthen click 'Extract' to get all the unique words."
+    var placeholderText: String = "Start by pasting articles or texts here.\n\nOf course you can also type them if you have more time :p\n\nClick the button above first to know the total words of the texts, then click 'Extract' to get all the unique words."
     @Binding var text: String
 
     func makeUIView(context: Context) -> UITextView {

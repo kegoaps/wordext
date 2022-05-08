@@ -10,7 +10,7 @@ import SwiftUI
 struct ExtractView: View {
     
     @StateObject var viewRouter: ViewRouter
-    @State private var wordCounter: String = "No word found!"
+    @State private var wordCounter: String = "0 word"
     @State var text: String = ""
     @State var isChecked: Bool = false
     
@@ -36,27 +36,6 @@ struct ExtractView: View {
                             }
                     }
                     
-                    HStack {
-                        Button(action: {
-                            self.viewRouter.wordsFound = text.components(separatedBy: " ")
-                            if viewRouter.wordsFound.count == 1 && viewRouter.wordsFound[0] == "" {
-                                wordCounter = "No word found!"
-                            } else {
-                                wordCounter = "\(viewRouter.wordsFound.count) word(s) found!"
-                                isChecked = true
-                            }
-                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
-                        }) {
-                            Image(systemName: "questionmark.circle.fill")
-                                .foregroundColor(.black)
-                        }
-                        
-                        Text("\(wordCounter)")
-                            .font(.caption2)
-                            .fontWeight(.bold)
-                    }
-                    
-                    
                     Button(action: {
                         removePunctuationAndDuplicates()
                         viewRouter.learningWords = viewRouter.wordsFound
@@ -69,11 +48,35 @@ struct ExtractView: View {
                     }
                     .padding(10)
                     .foregroundColor(.white)
+                    .frame(width: 0.92 * screenWidth)
                     .background(.black)
                     .cornerRadius(5)
                     .disabled(!isChecked)
                 }
                 .navigationTitle("WordExt")
+                .navigationBarItems(trailing:
+                                        HStack(spacing: 1) {
+                                            Text("\(wordCounter)")
+                                                .font(.caption)
+                                                .fontWeight(.bold)
+                                                
+                                            Button(action: {
+                                                self.viewRouter.wordsFound = text.components(separatedBy: " ")
+                                                if viewRouter.wordsFound.count == 1 && viewRouter.wordsFound[0] == "" {
+                                                    wordCounter = "0 word"
+                                                } else {
+                                                    wordCounter = "\(viewRouter.wordsFound.count) word(s)"
+                                                    isChecked = true
+                                                }
+                                                UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+                                            }) {
+                                                Image(systemName: "magnifyingglass.circle.fill")
+                                                    .foregroundColor(.black)
+                                                    .font(.title)
+                                            }
+                                        }
+                                        
+                                    )
             }
         }
     }
