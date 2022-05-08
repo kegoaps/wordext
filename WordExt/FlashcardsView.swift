@@ -44,6 +44,7 @@ struct FlashcardsView: View {
                     }
                     .frame(width: 0.92 * screenWidth, height: 0.12 * screenHeight)
                     .padding(.bottom, 1)
+                    .padding(.top, 20)
                     
                     
                     HStack(spacing: 10) {
